@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { create } from "ipfs-http-client";
 import Web3 from "web3";
+//https://rinkeby.etherscan.io/address/0xA07721F8B2A95AaCa764d943d182e6Cb8042c62f#code
 
-const ERC721Address = "0x11998e1331e33653e3aca0bc9Ecb49b0dafCE365";
+const ERC721Address = "0xA07721F8B2A95AaCa764d943d182e6Cb8042c62f";
 const ERC721Abi = [
   {
     anonymous: false,
