@@ -555,6 +555,12 @@ function App() {
     }
   };
 
+  const connectwallet = async () => {
+    await window.ethereum
+      .request({ method: "eth_requestAccounts" })
+      .then(() => console.log("metamask connected"));
+  };
+
   const handleSubmit = async () => {
     setLoading(true);
     try {
@@ -610,6 +616,9 @@ function App() {
 
   return (
     <div className="App">
+      <button onClick={() => connectwallet()} disabled={loading}>
+        Connect wallet
+      </button>
       <div className="form-input">
         <p>Name</p>
         <input
